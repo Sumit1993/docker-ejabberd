@@ -10,8 +10,7 @@ RUN git clone https://github.com/Sumit1993/docker-ejabberd.git
 WORKDIR /ejabberd
 COPY vars.config .
 COPY rel/*exs rel/
-RUN git checkout ${VERSION/latest/HEAD} \
-    && mix deps.get \
+mix deps.get \
     && (cd deps/eimp; ./configure)
 
 # Compile
