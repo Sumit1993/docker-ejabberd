@@ -15,7 +15,7 @@
 ###
 
 hosts:
-  - localhost
+  - [inlaska.com]
 
 loglevel: 4
 log_rotate_size: 10485760
@@ -135,7 +135,7 @@ acl:
       - ::FFFF:127.0.0.1/128
   admin:
     user:
-      - "admin@localhost"
+      - "admin@inlaska.com"
 
 access_rules:
   local:
