@@ -14,8 +14,7 @@
 ### Refer to http://en.wikipedia.org/wiki/YAML for the brief description.
 ###
 
-hosts:
-  - [inlaska.com]
+hosts: [inlaska.com]
 
 loglevel: 4
 log_rotate_size: 10485760
