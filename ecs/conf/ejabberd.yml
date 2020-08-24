@@ -61,6 +61,8 @@ listen:
       "/upload": mod_http_upload
       "/ws": ejabberd_http_ws
       "/oauth": ejabberd_oauth
+    web_admin: true
+    http_bind: true
   -
     port: 5280
     ip: "::"
