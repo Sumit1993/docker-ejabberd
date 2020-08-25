@@ -6,7 +6,7 @@ LABEL maintainer="ProcessOne <contact@process-one.net>" \
     product="Ejabberd Community Server builder"
 
 # Get ejabberd sources, dependencies, configuration
-RUN git clone https://github.com/Sumit1993/docker-ejabberd.git
+RUN git clone https://github.com/processone/ejabberd.git
 WORKDIR /ejabberd
 COPY vars.config .
 COPY rel/*exs rel/
@@ -44,7 +44,7 @@ LABEL maintainer="ProcessOne <contact@process-one.net>" \
     product="Ejabberd Community Server Official Docker Image" \
     version=$VERSION \
     org.label-schema.vcs-ref=$VCS_REF \
-    org.label-schema.vcs-url="https://github.com/processone/docker-ejabberd" \
+    org.label-schema.vcs-url="https://github.com/Sumit1993/docker-ejabberd.git" \
     org.label-schema.build-date=$BUILD_DATE \
     org.label-schema.name="Ejabberd Community Server Official Docker Image" \
     org.label-schema.description="Robust, Scalable and Extensible Realtime Server using XMPP, MQTT and SIP" \
