@@ -6,11 +6,12 @@ LABEL maintainer="ProcessOne <contact@process-one.net>" \
     product="Ejabberd Community Server builder"
 
 # Get ejabberd sources, dependencies, configuration
-RUN git clone https://github.com/Sumit1993/docker-ejabberd.git
+RUN git clone https://github.com/processone/ejabberd.git
 WORKDIR /ejabberd
 COPY vars.config .
 COPY rel/*exs rel/
-mix deps.get \
+RUN git checkout ${VERSION/latest/HEAD} \
+    && mix deps.get \
     && (cd deps/eimp; ./configure)
 
 # Compile
